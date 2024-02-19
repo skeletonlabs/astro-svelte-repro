@@ -1,7 +1,16 @@
 <script lang="ts">
-  let foo = "bar";
+  let name = "john";
+
+  /*
+    The Workaround
+    - Props added:
+        - Local: works in MDX context
+        - Remote: shows `undefined` in UI
+    - Props removed:
+        - Local: shows `undefined` in UI
+        - Remote: shows `undefined` in UI
+  */
+  const {} = $props<any>();
 </script>
 
-<p>This is a Svelte test component.</p>
-
-<p>Foo: {foo}</p>
+<p>Hello {name}, this is a Svelte test component.</p>
